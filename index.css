@@ -27,10 +27,7 @@ header{
     margin: 0;
 }
 
-main {
 
-    border: #DEDEDE solid 0.5px;
-}
 
 /* products */
 
@@ -211,6 +208,23 @@ input{
 .pay-btn{
     font-size: 20px;
     paddingn: 14px 0 17px 0;
+
+}
+
+/* thanks Message */
+
+.successfully-ordered{
+    width: 504px;
+    height: 100px;
+    background-color: #ECFDF5;
+    margin: 45px 50px;
+    padding: 10px 48px;
+    font-size: 32px;
+    text-align: center;
+    color: #065F46;
+}
+
+.thanks-message{s
 
 }
 

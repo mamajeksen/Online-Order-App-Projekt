@@ -5,14 +5,8 @@ let pickedProducts = []
 
 let totalPrice = 0
 
-
-
-// completeBtn.addEventListener("click", function(){
-//     modal.style.display = 'inline'
-//  })
-
-//  const completeBtn = document.getElementById('complete-btn')
-
+const form = document.getElementById('form')
+const shopCard = document.getElementById('shoppig-card')
 
 
 document.addEventListener("click", function(e){
@@ -37,17 +31,33 @@ const modal = document.getElementById('modal')
 
 function handleBtns(btnId){
 
+let custumerName = document.querySelector('#name')
 
     if (btnId == 'complete-btn'){
+
         modal.style.display = 'inline'
-    } else if (btnId == 'pay-btn') {
-        if (document.getElementsByName('form').isvalid) {
-            modal.style.display = 'none'
-        }
+
+    } else if (btnId == 'pay-btn' ) {
+
+
+        if (form.reportValidity()) {
+
+        modal.style.display = 'none'
+        shopCard.classList.add('hidden')
+
+        document.getElementById('successfully-ordered').innerHTML = `
+
+        <div class="successfully-ordered">
+
+            <p class="thanks-message"> Thanks ${custumerName.value}! Your order is on it´s way!</p>
+        </div>
+        `
     }
-
-
 }
+
+    
+}
+
 
 
 function shoppingCard(productId) {
@@ -180,9 +190,9 @@ function render() {
     document.getElementById('products').innerHTML = getProductHtml()
 
     if (pickedProducts.length > 0) {
-    document.getElementById('shoppig-card').classList.remove('hidden')
+    shopCard.classList.remove('hidden')
 } else {
-    document.getElementById('shoppig-card').classList.add('hidden')}
+    shopCard.classList.add('hidden')}
 
 
         document.getElementById('shop-list').innerHTML = renderShoppingList()

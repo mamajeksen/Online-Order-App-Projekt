@@ -28,21 +28,22 @@
 
                 <h2>Enter card details</h2>
 
-                <form>
+                <form id="form">
 
                     <div class="input">
                         
-                        <input type="text" name="name" placeholder="Enter your name" required/>
-                        <input type="tel"  name="card" placeholder="Enter card number" required/>
-                        <input type="tel"  name="cvv" maxlength="4"  placeholder="Enter CVV" required/>
+                        <input id="name" type="text" name="name" placeholder="Enter your name" required/>
+                        <input id="card" type="tel"  name="card" placeholder="Enter card number" required/>
+                        <input id="cvv" type="tel"  name="cvv" maxlength="4"  placeholder="Enter CVV" required/>
         
                     </div>
                     
-                    <button id="pay-btn" class="pay-btn" type="submit">Pay</button>
+                    <button id="pay-btn" class="pay-btn" type="button">Pay</button>
+                    
                 </form>
-
-
+                
             </div>
+            
         </main>
 
         <main>
@@ -74,13 +75,12 @@
                     <button id="complete-btn" class="complete-order" data-order="complete"> Complete order </button>
 
                 </div>
-
                 
-
             </section>
 
+        </main>
 
-
+        <main id="successfully-ordered">
 
         </main>
 
