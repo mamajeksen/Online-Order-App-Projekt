@@ -52,6 +52,8 @@ let custumerName = document.querySelector('#name')
             <p class="thanks-message"> Thanks ${custumerName.value}! Your order is on it´s way!</p>
         </div>
         `
+            
+
     }
 }
 
